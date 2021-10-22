@@ -15,8 +15,8 @@ class CreateEmployeeKpisTable extends Migration
     {
         Schema::create('employee_kpis', function (Blueprint $table) {
             $table->id();
-            $table->string('kpi_id');
-            $table->string('employee_id');
+            $table->bigInteger('kpi_id');
+            $table->bigInteger('employee_id');
             $table->integer('rating');
             $table->boolean('latest')->default('0');
             $table->timestamps();
